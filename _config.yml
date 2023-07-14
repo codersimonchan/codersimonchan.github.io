@@ -1,12 +1,12 @@
 # Basic
 title: Simon Chan
-subtitle: Personal
+subtitle: IT Developer
 description: Welcome to My Blog
 # 头像里面的标题
 avatarTitle: Simon
 # 头像里面的描述
 avatarDesc: stay curious
-url: "https://simon2021521.github.io"
+url: "https://coderbistro.github.io"
 
 # 博客是否自动生成目录，false为不生成
 enableToc: true
