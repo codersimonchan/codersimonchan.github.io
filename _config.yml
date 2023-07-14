@@ -1,11 +1,11 @@
 # Basic
 title: Simon Chan
-subtitle: 个人站
-description: Welcome to My Personal Website
+subtitle: Personal
+description: Welcome to My Blog
 # 头像里面的标题
 avatarTitle: Simon
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
+avatarDesc: stay foolish, stay hungry
 url: "https://simon2021521.github.io"
 
 # 博客是否自动生成目录，false为不生成
