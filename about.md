@@ -1,33 +1,42 @@
 ---
 layout: page
-title: 关于我 
+title: Simon
 ---
+------------------------------------------------------------------------------------
 
-一个工作6年的 iOS SDK 开发者，在一家游戏公司做SDK开发和维护。
-
-除了iOS技术，我还一直维护着这个博客，懂一些前端的基础知识。
-
-平时喜欢用python写一些工具，能用工具做的事情坚决不用人工去操作。
-
-<h2> 我们的博客 </h2>  
-
-这个博客是我们大家的，目前已经有很大一部分人在使用我的博客模板了，我也很高兴大家使用我的模板。
-
-如果你想搭建一个跟我一样的博客，可以看我的 
-<a href="/2016/10/jekyll_tutorials1/"> Jekyll 搭建个人博客 </a>
-教程
+**Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481373 &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com**
 
 
-有关于博客主题的建议和意见都可以提给我，让我们一起来打造一个精美的主题吧~ 
+<h3>PROFESSIONAL SUMMARY</h3>
+----------------------------------------------------------------------------------------------------------------------------------
+Web developer with 2 years of experience designing and developing responsive websites and web applications. Proficient in HTML, CSS, JavaScript, and PHP, with experience using frameworks such as React, Angular, and Laravel. Skilled in working with databases, including MySQL and MongoDB, and implementing API integrations. Adept at collaborating with cross-functional teams, including designers and project managers, to deliver high-quality products on time and within budget.
+<h3>SKILLS</h3>
+----------------------------------------------------------------------------------------------------------------------------------
 
-博客源码在 <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
+* Node.js
+* PHP
+* MySQL
+* Git、SVN
+<h3>WORK HISTORY</h3>
+----------------------------------------------------------------------------------------------------------------------------------
+<p>APRIL 2021-CURRENT<p> 
+<p>IT Analyst | Newaim | Hawhtorn, VIC</p>
+
+* Developed and maintained websites and web applications using HTML, CSS, and JavaScript.
+* Worked with frameworks such as React and Angular to build dynamic and responsive user interfaces.
+* Implemented server-side functionality using PHP and Laravel to create robust and Collaborated with designers and project managers to create wireframes and mockups, and translate them into fully functional websites and applications.
+* Optimized website performance by implementing best practices for caching, image optimization, and code optimization.
+* Developed and maintained APIs for integrating with third-party services, such as payment gateways and social media platforms.
+* Used version control systems such as SVN and Git to manage code and collaborate with other developers.
+<h3>EDUCATION</h3>
+----------------------------------------------------------------------------------------------------------------------------------
+<p>Information Technology<p> 
+<p>RMIT University, Melbourne VIC 2020-2021</p>
+<p>2020-2021</p>
+<h3>LANGUGES</h3>
+----------------------------------------------------------------------------------------------------------------------------------
+<p>Chinese(Mandarin)---Native<p>
+<p>English--Professional Working<p> 
 
 
-<h3> 搭建博客遇到了问题解法方法 </h3>  
-
-查看 [技术支持](http://leopardpan.cn/support/) 需求帮助
-
-博客模板会一直持续更新，请持续关注我，谢谢~
-
-{% include comments.html %}
 
