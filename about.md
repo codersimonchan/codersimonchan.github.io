@@ -4,7 +4,7 @@ title: About Me
 ---
 
 <h2>Simon Cheng</h2>
-Melbourne, VIC 3170 &nbsp;&nbsp;\| &nbsp;&nbsp;0416481373 &nbsp;&nbsp;\| &nbsp;&nbsp;itdevelopersimon@gmail.com
+Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481373 &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com
 
 
 <h3>PROFESSIONAL SUMMARY</h3>
@@ -39,9 +39,9 @@ APRIL 2015-2019 &nbsp;&nbsp;\| &nbsp;&nbsp;Structural Engineer &nbsp;&nbsp;\| &n
 * Successfully completed project reports, ensuring all project milestones were met and budgets were kept within the original goal.
   
 <h3>EDUCATION</h3>
-Information Technology &nbsp;&nbsp;\| &nbsp;&nbsp;RMIT University, Melbourne VIC &nbsp;&nbsp;\| &nbsp;&nbsp;2020-2021 &nbsp;&nbsp;
+Information Technology &nbsp;&nbsp;| &nbsp;&nbsp;RMIT University, Melbourne VIC &nbsp;&nbsp;| &nbsp;&nbsp;2020-2021 &nbsp;&nbsp;
 <br>
-Master of Mechanical &nbsp;&nbsp;\| &nbsp;&nbsp;Harbin Engineer University, Harbin &nbsp;&nbsp;\| &nbsp;&nbsp;2008-2015 &nbsp;&nbsp;
+Master of Mechanical &nbsp;&nbsp;| &nbsp;&nbsp;Harbin Engineer University, Harbin &nbsp;&nbsp;| &nbsp;&nbsp;2008-2015 &nbsp;&nbsp;
 <h3>LANGUGES</h3>
 
 Chinese(Mandarin)-----Native
