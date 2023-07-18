@@ -63,7 +63,7 @@ blog_button:
 nav:
     - {title: Archive, description: archive, url: '/archive'}   
     - {title: Tags, description: tags, url: '/tags'}      
-    - {title: Support, description: support, url: '/support'}      
+    # - {title: Support, description: support, url: '/support'}      
     - {title: About, description: about, url: '/about'}   
     
 

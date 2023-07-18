@@ -21,7 +21,7 @@ Web developer with 2 years of experience designing and developing responsive web
 
 <h3>WORK HISTORY</h3>
 
-APRIL 2021-CURRENT &nbsp;&nbsp;\| &nbsp;&nbsp;IT Analyst &nbsp;&nbsp;\| &nbsp;&nbsp;Newaim &nbsp;&nbsp;\|&nbsp;&nbsp; Hawhtorn, VIC &nbsp;&nbsp;
+APRIL 2021-CURRENT &nbsp;&nbsp;\| &nbsp;&nbsp;IT Developer &nbsp;&nbsp;\| &nbsp;&nbsp;Newaim &nbsp;&nbsp;\|&nbsp;&nbsp; Hawhtorn, VIC &nbsp;&nbsp;
 
 * Developed and maintained websites and web applications using HTML, CSS, and JavaScript.
 * Worked with frameworks such as React and Angular to build dynamic and responsive user interfaces.
