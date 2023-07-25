@@ -1,6 +1,6 @@
 ---
 title: javaScript
-tags: [JS,前端]
+tags: [JS,Front_End]
 ---
 **[github笔记下载地址](https://github.com/codeOflI/codeOflI.github.io/blob/dev/source/_posts/js-note/javaScript/javaScript.md)**
 
