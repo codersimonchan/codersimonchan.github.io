@@ -1,13 +1,9 @@
-
-
-
-
+---
 layout: post
 title: Promise
 tags: [JS,Front_End]
-
+---
 [参考文档](https://juejin.cn/post/7136084613075730469)
-
 # javascript中的串行与并行
 
 本文来总结下js中的串行和并行。
