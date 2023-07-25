@@ -1,0 +1,232 @@
+
+
+
+
+layout: post
+title: Promise
+tags: [JS,Front_End]
+
+[参考文档](https://juejin.cn/post/7136084613075730469)
+
+# javascript中的串行与并行
+
+本文来总结下js中的串行和并行。
+
+## promise的并行
+
+ * array.map( function(currentElement, index, arr){} )  ： map() creates a new array from calling a function for every array element.
+ * 当只有第一个参数currentElement的时候，可以写成箭头函数的形式 map（t => {return }）， 此处涉及到箭头函数简写 t => {return } 。
+ * 函数通过为数组每一个element调用一个函数，将计算结果返回一个新的数组，在上例子中， map（t => { return ()=>{ return } ）,在map调用的函数当中，返回一个函数(函数会返回函数)
+ * 会返回一个新的函数放进数组当中，并且这些新的函数会返回一个promise，此时fnarr是一个新的函数数组，这样可以用fnarr数组再次调用map函数时，就会调用fnarr数组的元素本身（因为此时元素本身就是一个函数）
+
+```js
+const fnarr = [0, 1, 2, 3, 4, 5].map(t => {
+  return () => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        console.log(`promise${t}`)
+        resolve(t)
+      }, t * 1000)
+    })
+  }
+})
+```
+fnarr 是一个包含多个函数的数组，每个函数返回一个 Promise 对象。当使用 map 方法对 fnarr 进行遍历，并对每个函数执行调用 fn()，返回一个 Promise 对象的数组。然后，使用 Promise.all 方法来等待所有的 Promise 对象完成。一旦所有的 Promise 对象都解析（成功），then 方法中的回调函数将会被执行，并接收一个包含所有 Promise 解析值的数组 resArr。
+可以看到，尽管所有的Promise是并行执行的，但是在promise当中打印返回的结果是按照顺序排列的，这一点在某些场景下很有用。
+
+```js
+Promise.all(fnarr.map(fn => fn())).then(resArr => {
+  console.log(resArr)
+})
+```
+
+打印结果:
+
+```
+// 0s后
+promise0
+// 1s后
+promise1
+// 2s后
+promise2
+// 3s后
+promise3
+// 4s后
+promise4
+// 5s后
+promise5
+// 当所有promise执行完后返回所有的结果
+[0, 1, 2, 3, 4, 5]
+```
+
+## promise的串行
+
+既然要求串行，首先想到的是`async/await`实现:
+
+```
+async function run() {
+  for (let i = 0; i < fnarr.length; i++) {
+    const result = await fnarr[i]()
+    console.log(i, result)
+  }
+}
+
+run()
+```
+
+打印结果：
+
+```
+// 0s后
+0 0
+// 1s后
+1 1
+// 2s后
+2 2
+// 3s后
+3 3
+// 4s后
+4 4
+// 5s后
+5 5
+```
+
+## promise的串行和并行
+
+利用上面的知识，我们现在有一个需求：
+
+- 可以并发发送请求；这样代码在多个异步处理之后一起执行，而不是一个一个去执行。
+- 可以控制并发的数量：就是先发几个请求等这几个请求的结果回来后，在发另外的请求；
+
+思路：并发可以使用`Promise.all`，而控制并发的数量，相当于是串行，可以使用async+await来做。
+
+```
+1.分组：把所有的请求按照并发数量进行分组
+2.分组之后，那么就一组一组地按照顺序执行，即串行，使用async+await
+3.将request分组，小组与小组之间是串行，而组内请求是并行
+```
+
+### 分组：把所有的请求按照并发数量进行分组
+
+这个函数可以将一个数组按照指定的`max`大小进行分组，返回一个新的二维数组，其中每个子数组最多包含`max`个元素。
+
+```
+const group = (list = [], max = 0) => {
+  if (!list.length) {
+    return list;
+  }
+  let results = [];
+  for (let i = 0, len = list.length; i < len; i += max) {
+    results.push(list.slice(i, i + max));
+  }
+  return results;
+};
+```
+
+### 分组之后，那么就一组一组的执行，即串行，使用async+await
+
+```
+async function sendRequest(requests = [], max = 0, callback = () => {}) {
+  if (!requests.length) {
+    return requests
+  }
+  const groupRequest = group(requests, max)
+  const results = []
+  // groupItems是一个小组，groupRequst是所有的小组，这样让小组与小组之间的请求是串行，而组内的请求是并行的。
+  for (let groupItems of groupRequest) {
+    const result = await requestHandler(groupItems, callback) //组内并行，组间串行
+    results.push(result)
+  }
+  console.log('done', results)
+  return results
+}
+```
+groupItems是一个小组，小组内并行
+```
+async function requestHandler(groupItems, callback = () => {}) {
+  if (!groupItems.length) {
+    callback()
+    return groupItems
+  }
+  const promiseArr = groupItems.map(fn => fn())
+  const data = await Promise.allSettled(promiseArr).then(resArr => {
+    resArr.map(callback)//这里callback，等待输入函数，输入的函数可以打印所有的promise的value的值
+    return resArr
+  })
+  return data
+}
+```
+
+```
+const p1 = () => new Promise((resolve, reject) => setTimeout(resolve, 1000, 'p1'))
+const p2 = () => Promise.resolve('p2')
+const p3 = () => new Promise((resolve, reject) => setTimeout(resolve, 2000, 'p3'))
+const p4 = () => Promise.resolve('p4')
+const p5 = () => new Promise((resolve, reject) => setTimeout(resolve, 2000, 'p5'))
+const p6 = () => Promise.resolve('p6')
+const p7 = () => new Promise((resolve, reject) => setTimeout(resolve, 1000, 'p7'))
+const p8 = () => Promise.resolve('p8')
+const p9 = () => new Promise((resolve, reject) => setTimeout(reject, 1000, 'p9'))
+
+const arr = [p1, p2, p3, p4, p5, p6, p7, p8, p9]
+
+sendRequest(arr, 3, ({ reason, value }) => {
+    console.log(value || reason)
+})
+```
+
+打印结果:
+
+```
+// 3个为一组，每组都必须要请求结束
+p1
+p2
+p3
+// 3个为一组，每组都必须要请求结束
+p4
+p5
+p6
+// 3个为一组，每组都必须要请求结束
+p7
+p8
+p9
+// 最后的结果result
+done [
+  [
+    { status: 'fulfilled', value: 'p1' },
+    { status: 'fulfilled', value: 'p2' },
+    { status: 'fulfilled', value: 'p3' }
+  ],
+  [
+    { status: 'fulfilled', value: 'p4' },
+    { status: 'fulfilled', value: 'p5' },
+    { status: 'fulfilled', value: 'p6' }
+  ],
+  [
+    { status: 'fulfilled', value: 'p7' },
+    { status: 'fulfilled', value: 'p8' },
+    { status: 'rejected', reason: 'p9' }
+  ]
+]
+```
+
+`Promise.allSettled`是一个新的API，跟`Promise.all`差不多的用法，也是接受的数组，不过不同的是`Promise.allSettled`会等所有任务结束之后才会返回结果，而`Promise.all`只要有一个`reject`就会返回结果。
+
+同时`Promise.allSettled`返回的结果也有些不同：
+
+- 如果对应的 promise 已经 `fulfilled`，返回 { status: 'fulfilled', value: value }
+- 如果相应的 promise 已经被 `rejected`，返回 {status: 'rejected'， reason: reason }
+
+
+
+PS： setTimeout第三个参数的作用是给回调函数传入参数，如下
+
+```
+for (var i = 0; i<4; i++) {
+  setTimeout((i) => {
+    console.log(i)
+  }, 1000, i)
+}
+```
+
+PS：Async.js (https://caolan.github.io/async/)：Async.js是一个功能强大的实用工具库，提供了许多用于处理异步JavaScript的函数。它包括`async.series`、`async.parallel`等函数，可用于按顺序或并行执行任务。
