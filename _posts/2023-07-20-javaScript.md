@@ -189,8 +189,10 @@ JS中的字符串需要使用引号引起来双引号或单引号都行
  该类型的值只有一个 undefined  
  使用typeof检查一个Undefined类型的值时，会返回"undefined"  
 
-### 引用数据类型	  
- Object 对象  
+### 6.引用数据类型	  
+ JS中的变量都是保存在栈内存中的。基本数据类型的值直接在栈内存中存储，值与值之间是独立存在，修改一个变量不会影响其他的变量。引用数据类型是保存在堆内存中的，每创建一个新的对象，就会在堆内存中开辟出一个新的空间，而变量保存的是对象的内存地址（对象的引用），如果两个变量保存的是同一个对象引用，当一个变量修改属性时，另一个也会受到影响。即变量保存的是变量在堆内存中的地址。
+
+![1690764097998_E0EE9E57-47D8-432c-BB7E-1B25C81C7011](C:\Users\simon.cheng\Desktop\1690764097998_E0EE9E57-47D8-432c-BB7E-1B25C81C7011.png)
 
 ## 类型转换  
 
@@ -1257,7 +1259,7 @@ search()
 
 	**[x-y] x的ascii到y的ascii码之间的值**  
 
-[a-z] 小写字母 **（也可以[e-i])**  
+[a-z] 小写字母 **（也可以[e-i])**
 [A-Z] 大写字母   
 [A-z] 任意字母,**但是还包括了其他ASCII在此之中的**  
 [0-9] 任意数字  
@@ -1270,21 +1272,21 @@ search()
   \. 来表示.  
   \\  表示\  
 
-\w  
+\w
 	任意字母、数字、_  [A-z0-9_]  
-  \W  
+  \W
 	除了字母、数字、_  [ ^A-z0-9_]  
-  \d  
+  \d
 	任意的数字 [0-9]  
-  \D  
+  \D
 	除了数字 [ ^0-9]  
-  \s  
+  \s
 	空格  
-  \S  
+  \S
 	除了空格  
-  \b  
+  \b
 	单词边界  
-  \B  
+  \B
 	除了单词边界  
 
   
@@ -1371,67 +1373,6 @@ Document Object Model
 	  
  innerHTML  
 	 使用该属性可以获取或设置元素内部的HTML代码  
-
-## 事件（Event）  
-
- 事件指的是用户和浏览器之间的交互行为。比如：点击按钮、关闭窗口、鼠标移动。。。  
- 我们可以为事件来绑定回调函数来响应事件。  
- 绑定事件的方式：  
-	1.可以在标签的事件属性中设置相应的JS代码  
-		例子：  
-
-```javascript  
-<button onclick="js代码。。。">按钮</button>  
-```
-
-2.可以通过为对象的指定事件属性设置回调函数的形式来处理事件  
-	例子：  
-
-```javascript  
-<button id="btn">按钮</button>  
-<script>  
-    var btn = document.getElementById("btn");  
-    btn.onclick = function(){  
-  
-    };  
-</script>  
-```
-
-文档的加载  
- 浏览器在加载一个页面时，是按照自上向下的顺序加载的，加载一行执行一行。  
- 如果将js代码编写到页面的上边，当代码执行时，页面中的DOM对象还没有加载，  
-	此时将会无法正常获取到DOM对象，导致DOM操作失败。  
- 解决方式一：  
-	 可以将js代码编写到body的下边  
-	  
-
-```javascript  
-<body>  
-		<button id="btn">按钮</button>  
-  
-		<script>  
-			var btn = document.getElementById("btn");  
-			btn.onclick = function(){  
-		  
-			};  
-	</script>  
-</body>  
-```
-
- 解决方式二：  
-	 将js代码编写到window.onload = function(){}中  
-	 window.onload 对应的回调函数会在整个页面加载完毕以后才执行，  
-		所以可以确保代码执行时，DOM对象已经加载完毕了		  
-
-```javascript  
-<script>  
-    window.onload = function(){  
-        var btn = document.getElementById("btn");  
-        btn.onclick = function(){  
-        };  
-    };  
-</script>	    
-```
 
 ## DOM查询  
 
@@ -1655,7 +1596,66 @@ scrollLeft
   
 
 # 事件（Event）  
+## 事件（Event）  
 
+ 事件指的是用户和浏览器之间的交互行为。比如：点击按钮、关闭窗口、鼠标移动。。。  
+ 我们可以为事件来绑定**回调函数**来响应事件。  
+ 绑定事件的方式：  
+	1.可以在标签的事件属性中设置相应的JS代码  
+		例子：  
+
+```javascript  
+<button onclick="js代码。。。">按钮</button>  
+```
+
+2.可以通过为对象的指定事件属性设置回调函数的形式来处理事件  
+	例子：  
+
+```javascript  
+<button id="btn">按钮</button>  
+<script>  
+    var btn = document.getElementById("btn");  
+    btn.onclick = function(){  
+  
+    };  
+</script>  
+```
+
+文档的加载  
+ 浏览器在加载一个页面时，是按照自上向下的顺序加载的，加载一行执行一行。  
+ 如果将js代码编写到页面的上边，当代码执行时，页面中的DOM对象还没有加载，  
+	此时将会无法正常获取到DOM对象，导致DOM操作失败。  
+ 解决方式一：  
+	 可以将js代码编写到body的下边  
+	  
+
+```javascript  
+<body>  
+		<button id="btn">按钮</button>  
+  
+		<script>  
+			var btn = document.getElementById("btn");  
+			btn.onclick = function(){  
+		  
+			};  
+	</script>  
+</body>  
+```
+
+ 解决方式二：  
+	 将js代码编写到window.onload = function(){}中  
+	 window.onload 对应的回调函数会在整个页面加载完毕以后才执行，  
+		所以可以确保代码执行时，DOM对象已经加载完毕了		  
+
+```javascript  
+<script>  
+    window.onload = function(){  
+        var btn = document.getElementById("btn");  
+        btn.onclick = function(){  
+        };  
+    };  
+</script>	    
+```
 ## 事件对象  
 
 当响应函数被调用时，浏览器每次都会将一个事件对象作为实参传递进响应函数中，这个事件对象中封装了当前事件的相关信息，比如：鼠标的坐标，键盘的按键，鼠标的按键，滚轮的方向。。  
