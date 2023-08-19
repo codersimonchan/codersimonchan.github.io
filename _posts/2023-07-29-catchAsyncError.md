@@ -3,8 +3,6 @@ layout: post
 title: An utility function that wraps async functions to handle errors
 tags: [JS]
 ---
-# Catch Async Error
-
 ## Handle errors with try...catch
 
 In Node.js, you can use `try...catch` blocks to handle exceptions (errors) that might occur during the execution of your code. When using an async function, you'll notice that await only captures the value of a successful promise, making it unable to capture the failure results of the catch method execution. As a result, in async functions, we commonly employ the `try...catch` structure to handle errors. Whenever an error occurs within the try block, the code execution pauses, and the catch block captures the error. Hence, it's a common practice to combine async functions with `try...catch`.
