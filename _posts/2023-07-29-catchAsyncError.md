@@ -3,7 +3,7 @@ layout: post
 title: An utility function that wraps async functions to handle errors
 tags: [JS]
 ---
-# Try-Catch
+# Catch Async Error
 In Node.js, you can use `try...catch` blocks to handle exceptions (errors) that might occur during the execution of your code
 
 When using an async function, you'll notice that await only captures the value of a successful promise, making it unable to capture the failure results of the catch method execution. As a result, in async functions, we commonly employ the `try...catch` structure to handle errors. Whenever an error occurs within the try block, the code execution pauses, and the catch block captures the error. Hence, it's a common practice to combine async functions with `try...catch`.
@@ -25,7 +25,7 @@ module.exports = fn => {
     };
 };
 ```
-    
+
 1.`module.exports`: This is a Node.js construct used to export functionality from a module. In this case, the module is exporting a function.
 
 2.`(req, res, next) => { ... }`: This is an Express.js middleware function. It takes three arguments: req (request), res (response), and next (next is actually a function in the chain). It wraps the async function and handles any errors that may occur.
