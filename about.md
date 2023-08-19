@@ -3,7 +3,8 @@ layout: page
 title: About Me
 ---
 
-<h2>Simon Cheng</h2>
+<h2>Simon Chan</h2>
+
 Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481*** &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com
 
 
