@@ -4,12 +4,12 @@ title: About Me
 ---
 
 <h2>Simon Cheng</h2>
-Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481373 &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com
+Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481*** &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com
 
 
 <h3>PROFESSIONAL SUMMARY</h3>
 
-Web developer with 2 years of experience designing and developing responsive websites and web applications. Proficient in HTML, CSS, JavaScript, and PHP, with experience using frameworks such as React, Angular, and Laravel. Skilled in working with databases, including MySQL and MongoDB, and implementing API integrations. Adept at collaborating with cross-functional teams, including designers and project managers, to deliver high-quality products on time and within budget.
+Web developer with 3 years of experience designing and developing responsive websites and web applications. Proficient in HTML, CSS, JavaScript, and PHP, with experience using frameworks such as React, Angular, and Laravel. Skilled in working with databases, including MySQL and MongoDB, and implementing API integrations. Adept at collaborating with cross-functional teams, including designers and project managers, to deliver high-quality products on time and within budget.
 
 <h3>SKILLS</h3>
 
@@ -30,6 +30,7 @@ APRIL 2021-CURRENT &nbsp;&nbsp;\| &nbsp;&nbsp;IT Developer &nbsp;&nbsp;\| &nbsp;
 * Developed and maintained APIs for integrating with third-party services, such as payment gateways and social media platforms.
 * Used version control systems such as SVN and Git to manage code and collaborate with other developers.
   
+
 APRIL 2015-2019 &nbsp;&nbsp;\| &nbsp;&nbsp;Structural Engineer &nbsp;&nbsp;\| &nbsp;&nbsp;AVIC SAC Commercial Aircraft Company Limited &nbsp;&nbsp;\|&nbsp;&nbsp; China&nbsp;&nbsp;
 
 * Conducted static and dynamic analysis of aircraft structure, ensuring compliance with regulatory standards.
