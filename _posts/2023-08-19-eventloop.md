@@ -1,4 +1,8 @@
-
+---
+layout: post
+title: How Event Loop Works
+tags: [JS]
+---
 
 ## What is Event Loop
 
@@ -8,7 +12,7 @@ The Event Loop is an important concept in JavaScript runtime environments, parti
 
 Although there are some differences in the event loop between Node.js and browsers, the core concept remains similar. Understanding the event loop is crucial for writing efficient, non-blocking JavaScript code, especially when dealing with numerous I/O operations and asynchronous tasks.
 
-
+![alt](../images/posts/jekyll/eventloop.png)
 
 ## How Event Loop works
 
@@ -20,12 +24,16 @@ When running an program in browser, the computer not only help us create a heap 
   - microtask queue
 
 1. First of all, main thread would execute the code from top to bottom, if meet any asynchronous task, just put it into Web API to monitor, will not prevent the main thread to run the synchronous code from top to bottom.
+
 2. When any monitored asynchronous task in WEB API is ready to run, it won't execute immediately, instead was moved to Event Queue to wait to be called. 
    - There are 2 queues in Event Queue depends on micro task or macro task (task)
    - First-In-First-Out, who first comes into the queue would be first called in their own task queue.
    - So, for many timer tasks, we do set up a timer. However, when the  scheduled time is reached, it doesn't necessarily run immediately. The  scheduled time merely places the task in the queue, waiting its turn,  rather than executing it immediately.
    -  Microtasks always take priority over macro tasks
+
 3. When all synchronous tasks have been executed and completed, the main thread becomes available. The microtask queue is then processed on the main thread if there are microtasks in the micro queue, they are executed one by one. If there are no microtasks, the event loop checks for any pending macro tasks in the task queue and executes them. After processing one macro tasks, the event loop returns to the microtask queue to check if there are any remaining microtasks. This emphasizes that microtasks always take priority over macro tasks. Macro tasks are executed only when the microtask queue is empty. For those tasks of the same level are processed in a first-in-first-out manner.
+
+   
 
 ## Micro or Macro
 
@@ -52,3 +60,9 @@ Key points to note:
 - Macro tasks are executed after micro tasks, only when the current task queue is empty.
 
 Please keep in mind that the list provided is not exhaustive, and the specific macro tasks and micro tasks may vary depending on the JavaScript runtime environment (such as browsers, Node.js). Understanding the execution order of macro tasks and micro tasks is crucial for writing effective asynchronous code.
+
+
+
+### Reference
+
+https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif
