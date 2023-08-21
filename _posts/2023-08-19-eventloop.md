@@ -12,7 +12,7 @@ The Event Loop is an important concept in JavaScript runtime environments, parti
 
 Although there are some differences in the event loop between Node.js and browsers, the core concept remains similar. Understanding the event loop is crucial for writing efficient, non-blocking JavaScript code, especially when dealing with numerous I/O operations and asynchronous tasks.
 
-![alt](../images/posts/jekyll/eventloop.png)
+![eventloop](/images/posts/jekyll/eventloop.png)
 
 ## How Event Loop works
 
