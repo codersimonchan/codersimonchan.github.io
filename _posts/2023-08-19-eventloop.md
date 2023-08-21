@@ -65,4 +65,4 @@ Please keep in mind that the list provided is not exhaustive, and the specific m
 
 ### Reference
 
-https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif
+[https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif](https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif)
