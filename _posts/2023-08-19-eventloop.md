@@ -8,8 +8,6 @@ tags: [JS]
 
 The Event Loop is an important concept in JavaScript runtime environments, particularly in browsers and Node.js. It manages the execution order of asynchronous operations, callback functions, and events. We could say event loop is actually a mechanism , with this mechanism enables JavaScript to handle asynchronous operations within a single thread while maintaining relatively good performance and responsiveness.
 
-
-
 Although there are some differences in the event loop between Node.js and browsers, the core concept remains similar. Understanding the event loop is crucial for writing efficient, non-blocking JavaScript code, especially when dealing with numerous I/O operations and asynchronous tasks.
 
 ![eventloop](/images/posts/jekyll/eventloop.png)
