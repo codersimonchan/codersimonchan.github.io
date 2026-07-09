@@ -2,33 +2,138 @@
 layout: default
 ---
 
-<div class="main-post-list hidden">
+<main id="blog" class="showcase-page showcase-v2 main-post-list">
+  <section id="about" class="showcase-hero reveal-on-scroll">
+    <p class="showcase-kicker">Product Engineer | Full-Stack Builder</p>
+    <h1>Simon Cheng</h1>
+    <p class="showcase-lead">
+      Melbourne-based product engineer focused on scalable integrations, backend reliability, and practical product delivery.
+    </p>
+    <div class="showcase-cta-row">
+      <a class="showcase-btn showcase-btn-primary" href="/#projects">View Projects</a>
+      <a class="showcase-btn" href="/assets/resume/Simon-Cheng-Resume-v3.pdf" download>Download Resume (PDF)</a>
+      <a class="showcase-btn" href="/#contact">Contact Me</a>
+    </div>
+    <ul class="showcase-metrics">
+      <li><strong>35+</strong><span>e-commerce channels supported</span></li>
+      <li><strong>5+</strong><span>years building products</span></li>
+      <li><strong>100%</strong><span>focus on readable code</span></li>
+    </ul>
+    <p class="showcase-brief">
+      I work across product, engineering, and operations to turn complex workflows into stable systems that teams can trust.
+    </p>
+  </section>
 
-  <ol class="post-list">
-    {% for post in paginator.posts %}
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></h2>
-      <p class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
-      <div class="post-list__meta">        
-        <time datetime="{{post.date | date: date_to_xmlschema}}" class="post-list__meta--date date">
-          <img src="/images/calendar.png" width="20px" /> 
-          {{ post.date | date: "%F"}}</time> 
-        <div class = "tag-img-icon">
-          <img src="/images/tag-icon.svg" width="20px" /> 
-        </div>
-        <a href="/tags">
-          <div class = "post-list-icon-mate">
-            <span class="post-list__meta--tags-right">{{ post.tags }}</span>
-          </div>
-          <div class = "post-list-small-mate">
-          <a class="btn-border-small" href={{ post.url }}>More details » </a>
-          </div>
-      </div>
-      <hr class="post-list__divider" />
-    </li>
-    {% endfor %}
-  </ol>
+  <section id="projects" class="showcase-section reveal-on-scroll">
+    <h2>Projects</h2>
+    <div class="showcase-grid">
+      <article class="showcase-card reveal-on-scroll project-tone-a">
+        <h3>Multi-Channel E-Commerce Pricing Platform</h3>
+        <p>
+          Built and maintained a pricing platform supporting 35+ channels including Amazon AU, Woolworths MarketPlus,
+          and eBay.
+        </p>
+        <p class="showcase-outcome">Impact: 35+ channels unified under one pricing workflow.</p>
+        <p>Delivered pricing engine, inventory-aware recommendations, and promotion framework.</p>
+        <p class="showcase-stack">Node.js | TypeScript | Express | Prisma | PostgreSQL | Monorepo (14 services)</p>
+        <a href="/#resume">See Experience</a>
+      </article>
+      <article class="showcase-card reveal-on-scroll project-tone-b">
+        <h3>Zendesk Integration Adapter — Aftersale System</h3>
+        <p>
+          Designed middleware connecting order management, 40+ e-commerce/dropship channels, and Zendesk.
+        </p>
+        <p class="showcase-outcome">Impact: 50+ APIs delivered for scalable ticket lifecycle operations.</p>
+        <p>Shipped 50+ APIs for ticket lifecycle and unified multi-channel message ingestion.</p>
+        <p class="showcase-stack">Node.js | Express | REST API | Zendesk | Integration Middleware</p>
+        <a href="/#resume">See Experience</a>
+      </article>
+      <article class="showcase-card reveal-on-scroll project-tone-c">
+        <h3>Channel Profile — Full-Stack Channel Management System</h3>
+        <p>
+          Independently delivered a full-stack channel master-data platform for profile, commission, and analytics management.
+        </p>
+        <p class="showcase-outcome">Impact: faster analytics and release consistency across environments.</p>
+        <p>Improved high-volume query performance and owned Docker + Bitbucket Pipelines CI/CD.</p>
+        <p class="showcase-stack">TypeScript | Express | Prisma | PostgreSQL | React | Vite</p>
+        <a href="/#resume">See Experience</a>
+      </article>
+    </div>
+  </section>
 
-  {% include pagination.html %}
+  <section id="resume" class="showcase-section reveal-on-scroll">
+    <h2>Resume</h2>
+    <p>
+      Role timeline and responsibilities. Download the full PDF for complete details.
+      <a href="/assets/resume/Simon-Cheng-Resume-v3.pdf" download>Download PDF Resume</a>
+    </p>
+    <div class="showcase-timeline">
+      <article class="reveal-on-scroll">
+        <h4>Product Engineer</h4>
+        <p class="showcase-time">2021 - Present · Melbourne</p>
+        <p>
+          Lead design and delivery of backend services and system integrations for e-commerce operations.
+        </p>
+        <p>
+          Drive cross-team implementation from requirement scoping to production rollout and stabilization.
+        </p>
+        <p>
+          Maintain service quality, data reliability, and long-term maintainability in a multi-service environment.
+        </p>
+      </article>
+      <article class="reveal-on-scroll">
+        <h4>Zendesk Integration Adapter · Aftersale System</h4>
+        <p class="showcase-time">Core Responsibility</p>
+        <p>
+          Owned Zendesk integration design and API delivery for end-to-end support workflows.
+        </p>
+        <p>
+          Established scalable multi-channel message routing strategy for centralized ticket handling.
+        </p>
+      </article>
+      <article class="reveal-on-scroll">
+        <h4>Channel Profile · Full-Stack Channel Management System</h4>
+        <p class="showcase-time">Core Responsibility</p>
+        <p>
+          Delivered end-to-end full-stack system architecture and implementation for channel master-data workflows.
+        </p>
+        <p>
+          Optimized performance for high-volume datasets with partitioning, indexing, and sync automation.
+        </p>
+        <p>
+          Managed containerization and CI/CD to keep releases consistent across dev and production.
+        </p>
+      </article>
+      <article class="reveal-on-scroll">
+        <h4>Aircraft Strength Design Engineer</h4>
+        <p class="showcase-time">May 2014 - Apr 2019 · Shenyang, China</p>
+        <p>
+          Designed and analyzed major commercial aircraft body structures.
+        </p>
+        <p>
+          Conducted static, fatigue, and damage tolerance analysis for structural safety and performance.
+        </p>
+      </article>
+    </div>
+    <div class="showcase-skills">
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>Node.js</span>
+      <span>React</span>
+      <span>REST API</span>
+      <span>SQL</span>
+      <span>Debugging</span>
+      <span>System Design</span>
+    </div>
+  </section>
 
-</div>
+  <section id="contact" class="showcase-section showcase-contact reveal-on-scroll">
+    <h2>Contact</h2>
+    <p>Open to Product Engineer opportunities in Melbourne only.</p>
+    <div class="showcase-contact-links">
+      <a href="mailto:itdevelopersimon@gmail.com">itdevelopersimon@gmail.com</a>
+      <a href="https://github.com/codebistro" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+</main>

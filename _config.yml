@@ -1,11 +1,13 @@
 # Basic
-title: Simon Chan
-subtitle: Curious Dev
-description: welcome to my bistro
+title: Simon Cheng
+subtitle: Product Engineer
+description: Building reliable web products with clean engineering.
 # 头像里面的标题
 avatarTitle: Simon
 # 头像里面的描述
-avatarDesc: stay curious
+avatarDesc: engineer | builder | learner
+# 头像图片路径
+avatar: /images/simon.jpg
 url: "https://codebistro.github.io"
 
 # 博客是否自动生成目录，false为不生成
@@ -57,18 +59,21 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: Home
+    title: Portfolio
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: Archive, description: archive, url: '/archive'}   
-    - {title: Tags, description: tags, url: '/tags'}      
-    # - {title: Support, description: support, url: '/support'}      
-    - {title: About, description: about, url: '/about'}   
+    - {title: About, description: about, url: '/#about'}
+    - {title: Projects, description: projects, url: '/#projects'}
+    - {title: Resume, description: resume, url: '/#resume'}
+    - {title: Contact, description: contact, url: '/#contact'}
     
 
 # Pagination
 gems: [jekyll-paginate,jekyll-sitemap]
+plugins:
+    - jekyll-paginate
+    - jekyll-sitemap
 paginate: 20
 paginate_path: "page/:num/"
 
