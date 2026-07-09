@@ -17,6 +17,7 @@ Web developer with 3 years of experience designing and developing responsive web
 * Node.js
 * PHP
 * MySQL
+* MongoDB
 * Git、SVN
 
 
@@ -24,6 +25,11 @@ Web developer with 3 years of experience designing and developing responsive web
 
 APRIL 2021-CURRENT &nbsp;&nbsp;\| &nbsp;&nbsp;IT Developer &nbsp;&nbsp;\| &nbsp;&nbsp;Newaim &nbsp;&nbsp;\|&nbsp;&nbsp; Hawhtorn, VIC &nbsp;&nbsp;
 
+* Developed a warehouse return-processing web application (React, Redux Toolkit, Axios, IBM Carbon Design System) covering the full workflow from login and barcode/tracking-number scanning to photo evidence upload and return submission, including camera-based SKU recognition, parsing of multiple courier tracking formats, integration with backend OMS/SMG APIs to look up and merge order/return data, and validation logic for different return process types (restock, second-hand, dispose, QC/NCR).
+* Developed a full-lifecycle after-sales ticket management system (PHP/Zend Framework, MySQL, MongoDB) for a multi-department e-commerce operation, covering ticket creation, multi-level approval workflows with role-based access control, and rejection tracking.
+* Implemented PayPal and bank-transfer refund execution pipelines with customer confirmation and financial review checkpoints.
+* Integrated Google Drive API for automated per-ticket attachment storage and built REST/OAuth data sync with external procurement (VP) and OMS systems for spare-part order fulfillment.
+* Added MongoDB-based full-text ticket search and Excel-based reporting/export for KPI and refund analytics.
 * Developed and maintained websites and web applications using HTML, CSS, and JavaScript.
 * Worked with frameworks such as React and Angular to build dynamic and responsive user interfaces.
 * Implemented server-side functionality using PHP and Laravel to create robust and Collaborated with designers and project managers to create wireframes and mockups, and translate them into fully functional websites and applications.
