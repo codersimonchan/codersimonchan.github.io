@@ -1,6 +1,7 @@
 <section class="footer">
     <footer>
-        <div class = "footer_div">  
+        {% unless page.url == "/" %}
+        <div class = "footer_div">
         <nav class="cover-navigation navigation--social">
           <ul class="navigation">
 
@@ -85,7 +86,7 @@
 
         </div>
 
-        <div class = "footer_div">  
+        <div class = "footer_div">
            <p class="copyright text-muted">
             Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by leopardpan</a> |
             <!-- <iframe
@@ -99,11 +100,12 @@
 
           <!-- 访问统计 -->
           <span id="busuanzi_container_site_pv">
-            Total visits 
+            Total visits
             <span id="busuanzi_value_site_pv"></span>
           </span>
 
         </div>
         <div>
+        {% endunless %}
     </footer>
 </section>

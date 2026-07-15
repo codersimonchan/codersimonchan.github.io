@@ -65,7 +65,7 @@ blog_button:
 nav:
     - {title: About, description: about, url: '/#about'}
     - {title: Projects, description: projects, url: '/#projects'}
-    - {title: Resume, description: resume, url: '/#resume'}
+    - {title: Work History, description: work history, url: '/#resume'}
     - {title: Contact, description: contact, url: '/#contact'}
     
 

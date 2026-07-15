@@ -17,7 +17,7 @@ layout: default
     <ul class="showcase-metrics">
       <li><strong>35+</strong><span>e-commerce channels supported</span></li>
       <li><strong>5+</strong><span>years building products</span></li>
-      <li><strong>100%</strong><span>focus on readable code</span></li>
+      <li><strong>10x</strong><span>faster load time delivered (10s &rarr; 1s)</span></li>
     </ul>
     <p class="showcase-brief">
       I work across product, engineering, and operations to turn complex workflows into stable systems that teams can trust.
@@ -25,166 +25,178 @@ layout: default
   </section>
 
   <section id="projects" class="showcase-section reveal-on-scroll">
-    <h2>Projects</h2>
+    <h2>Experience &amp; Projects</h2>
     <div class="showcase-grid">
       <article class="showcase-card reveal-on-scroll project-tone-a">
         <h3>Multi-Channel E-Commerce Pricing Platform</h3>
         <p>
-          Built and maintained a pricing platform supporting 35+ channels including Amazon AU, Woolworths MarketPlus,
-          and eBay.
+          A pricing engine that keeps prices, inventory-aware recommendations, and promotions in sync
+          across 35+ sales channels, including Amazon AU, Woolworths MarketPlus, and eBay.
         </p>
-        <p class="showcase-outcome">Impact: 35+ channels unified under one pricing workflow.</p>
-        <p>Delivered pricing engine, inventory-aware recommendations, and promotion framework.</p>
+        <p class="showcase-outcome">
+          My role: designed and built the pricing engine and promotion framework across a 14-service
+          monorepo, and owned performance tuning end to end.
+        </p>
+        <p>
+          Cut a key pricing-sync workflow's load time from ~10s to ~1s through query, indexing, and
+          caching improvements, and resolved concurrency issues in high-frequency price-update jobs so
+          channels never serve stale prices.
+        </p>
         <p class="showcase-stack">Node.js | TypeScript | Express | Prisma | PostgreSQL | Monorepo (14 services)</p>
-        <a href="/#resume">See Experience</a>
+      </article>
+      <article class="showcase-card reveal-on-scroll project-tone-b">
+        <h3>Channel Profile — Full-Stack Channel Management System</h3>
+        <p>A master-data platform for channel profiles, commission structures, and sales analytics.</p>
+        <p class="showcase-outcome">
+          My role: independently designed and delivered the system end to end, including the CI/CD pipeline.
+        </p>
+        <p>
+          Pre-loaded and partitioned high-volume sales data with indexing and automated sync jobs so
+          dashboards stay fast as channel count grows, and owned Docker + Bitbucket Pipelines for
+          consistent releases across environments.
+        </p>
+        <p class="showcase-stack">TypeScript | Express | Prisma | PostgreSQL | React | Vite | Docker</p>
+      </article>
+      <article class="showcase-card reveal-on-scroll project-tone-c">
+        <h3>Zendesk Integration Adapter — Aftersale System</h3>
+        <p>
+          Middleware connecting order management and 40+ e-commerce/dropship channels to Zendesk for
+          unified support handling.
+        </p>
+        <p class="showcase-outcome">
+          My role: designed the integration architecture and delivered 50+ REST API endpoints for
+          ticket creation, updates, merging, search, and export.
+        </p>
+        <p>
+          Built a tag-based classification layer to unify chat, chatbot, and email messages from 40+
+          channels into one ticket pipeline, pre-fetched channel/customer data so agents weren't
+          waiting on live lookups, and worked directly with support and ops teams to shape routing
+          rules around how they actually triaged tickets.
+        </p>
+        <p class="showcase-stack">Node.js | Express | Zendesk | REST API | Integration Middleware</p>
       </article>
       <article class="showcase-card reveal-on-scroll project-tone-a">
         <h3>After-Sales Ticket Management System</h3>
         <p>
-          Built a full-lifecycle after-sales ticket platform for a multi-department e-commerce operation,
-          spanning ticket creation, multi-level approval workflows, and refund execution.
+          A full-lifecycle ticket platform for a multi-department e-commerce operation, spanning
+          ticket creation, multi-level approval, and refund execution.
         </p>
-        <p class="showcase-outcome">Impact: end-to-end ticket, refund, and spare-part fulfillment across departments.</p>
-        <p>Integrated PayPal/bank-transfer refunds, Google Drive attachments, and VP/OMS data sync.</p>
+        <p class="showcase-outcome">
+          My role: owned the backend architecture end to end and translated requirements from
+          finance, warehouse, and support teams directly into the approval workflow.
+        </p>
+        <p>
+          Implemented PayPal/bank-transfer refund pipelines with financial checkpoints, synced
+          spare-part fulfillment data with procurement and OMS over REST/OAuth, and added MongoDB
+          full-text search plus exportable reporting to replace manual Excel tracking.
+        </p>
         <p class="showcase-stack">PHP | Zend Framework | MySQL | MongoDB | Google Drive API | REST/OAuth</p>
-        <a href="/#resume">See Experience</a>
       </article>
       <article class="showcase-card reveal-on-scroll project-tone-b">
         <h3>Warehouse Return Processing Application</h3>
         <p>
-          Built a warehouse return-processing web app covering login, barcode/tracking scanning,
-          photo evidence upload, and return submission end to end.
+          A return-processing web app covering login, barcode/tracking scanning, photo evidence, and
+          submission end to end.
         </p>
-        <p class="showcase-outcome">Impact: streamlined warehouse returns with OMS/SMG integration and multi-format tracking support.</p>
-        <p>Added camera-based SKU recognition and validation for restock, second-hand, dispose, and QC/NCR flows.</p>
-        <p class="showcase-stack">React | Redux Toolkit | Axios | IBM Carbon Design System | OMS/SMG APIs</p>
-        <a href="/#resume">See Experience</a>
-      </article>
-      <article class="showcase-card reveal-on-scroll project-tone-b">
-        <h3>Zendesk Integration Adapter — Aftersale System</h3>
+        <p class="showcase-outcome">
+          My role: built the frontend and the OMS/SMG integration layer that looks up and merges
+          order/return data.
+        </p>
         <p>
-          Designed middleware connecting order management, 40+ e-commerce/dropship channels, and Zendesk.
+          Added camera-based SKU recognition and validation logic for four distinct return paths
+          (restock, second-hand, dispose, QC/NCR) — edge-case-heavy business rules shaped directly by
+          how warehouse staff actually process returns.
         </p>
-        <p class="showcase-outcome">Impact: 50+ APIs delivered for scalable ticket lifecycle operations.</p>
-        <p>Shipped 50+ APIs for ticket lifecycle and unified multi-channel message ingestion.</p>
-        <p class="showcase-stack">Node.js | Express | REST API | Zendesk | Integration Middleware</p>
-        <a href="/#resume">See Experience</a>
+        <p class="showcase-stack">React | Redux Toolkit | Axios | IBM Carbon Design System | OMS/SMG APIs</p>
       </article>
       <article class="showcase-card reveal-on-scroll project-tone-c">
-        <h3>Channel Profile — Full-Stack Channel Management System</h3>
-        <p>
-          Independently delivered a full-stack channel master-data platform for profile, commission, and analytics management.
+        <h3>Sale Message System — MyDeal Channel Integration</h3>
+        <p>The internal pipeline that routes sales events and notifications across channels.</p>
+        <p class="showcase-outcome">
+          My role: took the MyDeal channel from spec to production as my first independently-owned
+          integration, setting the pattern later channels reused.
         </p>
-        <p class="showcase-outcome">Impact: faster analytics and release consistency across environments.</p>
-        <p>Improved high-volume query performance and owned Docker + Bitbucket Pipelines CI/CD.</p>
-        <p class="showcase-stack">TypeScript | Express | Prisma | PostgreSQL | React | Vite</p>
-        <a href="/#resume">See Experience</a>
       </article>
     </div>
   </section>
 
   <section id="resume" class="showcase-section reveal-on-scroll">
-    <h2>Resume</h2>
+    <h2>Work History</h2>
     <p>
-      Role timeline and responsibilities. Download the full PDF for complete details.
+      Role progression over the last 5 years. Download the full PDF for a condensed version.
       <a href="/assets/resume/Simon-Cheng-Resume-v3.pdf" download>Download PDF Resume</a>
     </p>
     <div class="showcase-timeline">
       <article class="reveal-on-scroll">
         <h4>Product Engineer</h4>
-        <p class="showcase-time">2021 - Present · Melbourne</p>
+        <p class="showcase-time">Jul 2025 - Present · Melbourne</p>
         <p>
-          Lead design and delivery of backend services and system integrations for e-commerce operations.
-        </p>
-        <p>
-          Drive cross-team implementation from requirement scoping to production rollout and stabilization.
-        </p>
-        <p>
-          Maintain service quality, data reliability, and long-term maintainability in a multi-service environment.
+          Promoted to independently own the company's pricing systems — moved from integration
+          delivery into product-level engineering ownership.
         </p>
       </article>
       <article class="reveal-on-scroll">
-        <h4>After-Sales Ticket Management System</h4>
-        <p class="showcase-time">Core Responsibility</p>
+        <h4>IT Engineer</h4>
+        <p class="showcase-time">Jul 2024 - Jul 2025 · Melbourne</p>
         <p>
-          Developed a full-lifecycle after-sales ticket management system (PHP/Zend Framework, MySQL, MongoDB)
-          for a multi-department e-commerce operation, covering ticket creation, multi-level approval workflows
-          with role-based access control, and rejection tracking.
-        </p>
-        <p>
-          Implemented PayPal and bank-transfer refund execution pipelines with customer confirmation
-          and financial review checkpoints.
-        </p>
-        <p>
-          Integrated Google Drive API for automated per-ticket attachment storage and built REST/OAuth data sync
-          with external procurement (VP) and OMS systems for spare-part order fulfillment.
-        </p>
-        <p>
-          Added MongoDB-based full-text ticket search and Excel-based reporting/export for KPI and refund analytics.
+          Promoted to own customer-service channel integrations — bringing every channel's support
+          conversations into a single system.
         </p>
       </article>
       <article class="reveal-on-scroll">
-        <h4>Warehouse Return Processing Application</h4>
-        <p class="showcase-time">Core Responsibility</p>
+        <h4>Middle-Level Developer II</h4>
+        <p class="showcase-time">Jul 2022 - Jul 2024 · Melbourne</p>
         <p>
-          Developed a warehouse return-processing web application (React, Redux Toolkit, Axios, IBM Carbon Design System)
-          covering the full workflow from login and barcode/tracking-number scanning to photo evidence upload
-          and return submission.
-        </p>
-        <p>
-          Implemented camera-based SKU recognition, parsing of multiple courier tracking formats,
-          and integration with backend OMS/SMG APIs to look up and merge order/return data.
-        </p>
-        <p>
-          Built validation logic for different return process types, including restock, second-hand, dispose, and QC/NCR.
+          Promoted to independently own the company's return and after-sales ticketing systems.
         </p>
       </article>
       <article class="reveal-on-scroll">
-        <h4>Zendesk Integration Adapter · Aftersale System</h4>
-        <p class="showcase-time">Core Responsibility</p>
+        <h4>Junior Developer I</h4>
+        <p class="showcase-time">Jul 2021 - Jul 2022 · Melbourne</p>
         <p>
-          Owned Zendesk integration design and API delivery for end-to-end support workflows.
-        </p>
-        <p>
-          Established scalable multi-channel message routing strategy for centralized ticket handling.
+          Promoted after onboarding to independently own the company's first channel integration
+          into the sale-message system.
         </p>
       </article>
       <article class="reveal-on-scroll">
-        <h4>Channel Profile · Full-Stack Channel Management System</h4>
-        <p class="showcase-time">Core Responsibility</p>
+        <h4>Graduate Developer</h4>
+        <p class="showcase-time">Apr 2021 - Jul 2021 · Melbourne</p>
         <p>
-          Delivered end-to-end full-stack system architecture and implementation for channel master-data workflows.
-        </p>
-        <p>
-          Optimized performance for high-volume datasets with partitioning, indexing, and sync automation.
-        </p>
-        <p>
-          Managed containerization and CI/CD to keep releases consistent across dev and production.
+          Onboarded by learning the sale-message system architecture before taking ownership of my
+          first channel integration.
         </p>
       </article>
       <article class="reveal-on-scroll">
         <h4>Aircraft Strength Design Engineer</h4>
         <p class="showcase-time">May 2014 - Apr 2019 · Shenyang, China</p>
         <p>
-          Designed and analyzed major commercial aircraft body structures.
-        </p>
-        <p>
-          Conducted static, fatigue, and damage tolerance analysis for structural safety and performance.
+          Designed and analyzed major commercial aircraft body structures. Conducted static,
+          fatigue, and damage tolerance analysis for structural safety and performance — the same
+          rigor around edge cases and failure modes now shows up in how I design backend systems.
         </p>
       </article>
+    </div>
+    <div class="showcase-skills-intro">
+      <p><strong>Day-to-day craft:</strong> full-stack development, REST API design, SQL &amp; NoSQL
+        databases, automated testing, debugging, Git-based version control — the fundamentals I bring
+        to every project.</p>
+      <p><strong>Working with people:</strong> comfortable translating requirements directly from
+        non-technical stakeholders (warehouse, support, finance) into working systems, and communicating
+        tradeoffs clearly to product and engineering peers.</p>
     </div>
     <div class="showcase-skills">
       <span>JavaScript</span>
       <span>TypeScript</span>
       <span>Node.js</span>
+      <span>PHP</span>
       <span>React</span>
       <span>Redux</span>
       <span>REST API</span>
       <span>SQL</span>
-      <span>PHP</span>
       <span>MongoDB</span>
-      <span>Debugging</span>
       <span>System Design</span>
+      <span>Performance Optimization</span>
+      <span>CI/CD</span>
     </div>
   </section>
 

@@ -1470,6 +1470,11 @@ body {
   font-size: 13px;
 }
 
+.showcase-skills-intro p {
+  margin: 0 0 8px;
+  color: #2f3d4a;
+}
+
 .showcase-contact {
   margin-bottom: 20px;
   padding: 20px;
@@ -1742,6 +1747,7 @@ body {
   color: #2f5d7a;
   font-weight: 700;
 }
+
 
 .showcase-v2 .showcase-contact {
   border-radius: 18px;
