@@ -8,7 +8,7 @@ avatarTitle: Simon
 avatarDesc: engineer | builder | learner
 # 头像图片路径
 avatar: /images/simon.jpg
-url: "https://codebistro.github.io"
+url: "https://codersimonchan.github.io"
 
 # 博客是否自动生成目录，false为不生成
 enableToc: true
@@ -21,9 +21,9 @@ comment:
 
 # Social
 social:
-    github: codebistro
+    github: codersimonchan
     # twitter: 
-    mail: itdevelopersimon@gmail.com
+    mail: helloworldsimon@gmail.com
 
 
 # 百度统计 
@@ -66,8 +66,17 @@ nav:
     - {title: About, description: about, url: '/#about'}
     - {title: Projects, description: projects, url: '/#projects'}
     - {title: Work History, description: work history, url: '/#resume'}
+    - {title: Skills, description: skills, url: '/#skills'}
     - {title: Contact, description: contact, url: '/#contact'}
     
+
+exclude:
+    - .claude
+    - .git
+    - .jekyll-cache
+    - node_modules
+    - Gemfile
+    - Gemfile.lock
 
 # Pagination
 gems: [jekyll-paginate,jekyll-sitemap]

@@ -5,7 +5,7 @@ title: About Me
 
 <h2>Simon Chan</h2>
 
-Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481*** &nbsp;&nbsp;| &nbsp;&nbsp;itdevelopersimon@gmail.com
+Melbourne, VIC 3170 &nbsp;&nbsp;| &nbsp;&nbsp;0416481*** &nbsp;&nbsp;| &nbsp;&nbsp;helloworldsimon@gmail.com
 
 
 <h3>PROFESSIONAL SUMMARY</h3>

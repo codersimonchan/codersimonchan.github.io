@@ -1327,7 +1327,6 @@ body {
 }
 
 .showcase-lead {
-  max-width: 720px;
   font-size: 18px;
   color: #2f3c48;
 }
@@ -1475,6 +1474,21 @@ body {
   color: #2f3d4a;
 }
 
+.showcase-skills-groups {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.showcase-skills-group h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6d84a0;
+}
+
 .showcase-contact {
   margin-bottom: 20px;
   padding: 20px;
@@ -1557,10 +1571,11 @@ body {
 
 .showcase-v2 .showcase-lead {
   margin-top: 14px;
-  max-width: 760px;
   font-size: 19px;
   line-height: 1.58;
   color: #304355;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .showcase-v2 .showcase-cta-row {
@@ -1704,8 +1719,17 @@ body {
 .showcase-v2 .showcase-timeline {
   position: relative;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 26px;
   margin-top: 12px;
+}
+
+.showcase-v2 .showcase-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  border-left: 2px dashed rgba(29, 139, 157, 0.65);
 }
 
 .showcase-v2 .showcase-timeline article {
@@ -1730,15 +1754,36 @@ body {
   box-shadow: 0 0 0 4px rgba(29, 139, 157, 0.2);
 }
 
+.showcase-v2 .showcase-time-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.showcase-v2 .showcase-time-row h4 {
+  margin: 0;
+}
+
 .showcase-v2 .showcase-time {
-  margin: 4px 0 8px;
-  font-size: 13px;
-  color: #4f6980;
+  padding-right: 10px;
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #3d5670;
+  white-space: nowrap;
+}
+
+.showcase-v2 .showcase-location {
+  margin: -2px 0 8px;
+  font-size: 12.5px;
+  color: #7a8ea3;
 }
 
 .showcase-v2 .showcase-skills {
   margin-top: 16px;
-  gap: 9px;
+  row-gap: 14px;
+  column-gap: 9px;
 }
 
 .showcase-v2 .showcase-skills span {
@@ -1746,6 +1791,13 @@ body {
   border-color: #d3e4f4;
   color: #2f5d7a;
   font-weight: 700;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.showcase-v2 .showcase-skills span:hover {
+  background: #e3f0fb;
+  border-color: #2f6f94;
+  transform: translateY(-1px);
 }
 
 
@@ -1783,6 +1835,10 @@ body {
   .showcase-v2 .showcase-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .showcase-skills-groups {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media all and (max-width: 700px) {
@@ -1807,6 +1863,10 @@ body {
   }
 
   .showcase-v2 .showcase-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-skills-groups {
     grid-template-columns: 1fr;
   }
 }
