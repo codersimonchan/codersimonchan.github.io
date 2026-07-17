@@ -17,7 +17,7 @@ layout: default
     <ul class="showcase-metrics">
       <li><strong>35+</strong><span>E-commerce channels supported</span></li>
       <li><strong>5+</strong><span>Years building products</span></li>
-      <li><strong>10x</strong><span>Faster pricing-sync load time (10s &rarr; 1s)</span></li>
+      <li><strong>80%+</strong><span>Faster pricing-adjustment latency (6s &rarr; 1.25s)</span></li>
     </ul>
   </section>
 
@@ -25,6 +25,24 @@ layout: default
     <h2>Experience &amp; Projects</h2>
     <div class="showcase-grid">
       <article class="showcase-card reveal-on-scroll project-tone-a">
+        <h3>AI Workbench</h3>
+        <p>
+          An internal AI assistant built on Gemini that lets company teams query business knowledge
+          and pricing rules directly, cutting down on manual lookups and reliance on tribal knowledge.
+        </p>
+        <p class="showcase-outcome">
+          My role: backend integration — built the custom retrieval framework that feeds company
+          SOPs and pricing rules into Gemini and exposed the assistant to internal teams.
+        </p>
+        <p>
+          Fed company SOPs and pricing-policy documents into the assistant, giving the Category team
+          a natural-language way to pull the right pricing rules on demand instead of digging through
+          internal docs — no vector database, just a self-built context-retrieval pipeline tailored to
+          how the docs are structured.
+        </p>
+        <p class="showcase-stack">Node.js | TypeScript | Express | Gemini API | Custom Retrieval Framework</p>
+      </article>
+      <article class="showcase-card reveal-on-scroll project-tone-b">
         <h3>Multi-Channel E-Commerce Pricing Platform</h3>
         <p>
           A pricing engine that keeps prices, inventory-aware recommendations, and promotions in sync
@@ -35,13 +53,13 @@ layout: default
           monorepo, and owned performance tuning end to end.
         </p>
         <p>
-          Cut a key pricing-sync workflow's load time from ~10s to ~1s through query, indexing, and
-          caching improvements, and resolved concurrency issues in high-frequency price-update jobs so
-          channels never serve stale prices.
+          Optimized the high-frequency pricing engine, slashing core sync workflow latency by 80%
+          through query, indexing, and caching improvements, while resolving critical concurrency
+          bottlenecks so channels never serve stale prices.
         </p>
         <p class="showcase-stack">Node.js | TypeScript | Express | Prisma | PostgreSQL | Monorepo (14 services)</p>
       </article>
-      <article class="showcase-card reveal-on-scroll project-tone-b">
+      <article class="showcase-card reveal-on-scroll project-tone-c">
         <h3>Channel Profile — Full-Stack Channel Management System</h3>
         <p>A master-data platform for channel profiles, commission structures, and sales analytics.</p>
         <p class="showcase-outcome">
@@ -54,8 +72,8 @@ layout: default
         </p>
         <p class="showcase-stack">TypeScript | Express | Prisma | PostgreSQL | React | Vite | Docker</p>
       </article>
-      <article class="showcase-card reveal-on-scroll project-tone-c">
-        <h3>Zendesk Integration Adapter — Aftersale System</h3>
+      <article class="showcase-card reveal-on-scroll project-tone-a">
+        <h3>Zendesk Message System</h3>
         <p>
           Middleware connecting order management and 40+ e-commerce/dropship channels to Zendesk for
           unified support handling.
@@ -72,25 +90,25 @@ layout: default
         </p>
         <p class="showcase-stack">Node.js | Express | Zendesk | REST API | Integration Middleware</p>
       </article>
-      <article class="showcase-card reveal-on-scroll project-tone-a">
-        <h3>After-Sales Ticket Management System</h3>
+      <article class="showcase-card reveal-on-scroll project-tone-b">
+        <h3>After-Sales Management System</h3>
         <p>
-          A full-lifecycle ticket platform for a multi-department e-commerce operation, spanning
-          ticket creation, multi-level approval, and refund execution.
+          A full-lifecycle after-sales platform for a multi-department e-commerce operation, spanning
+          ticket creation, multi-level approval, refund execution, and warehouse return processing.
         </p>
         <p class="showcase-outcome">
           My role: owned the backend architecture end to end and translated requirements from
           finance, warehouse, and support teams directly into the approval workflow.
         </p>
         <p>
-          Implemented PayPal/bank-transfer refund pipelines with financial checkpoints, synced
-          spare-part fulfillment data with procurement and OMS over REST/OAuth, and added MongoDB
-          full-text search plus exportable reporting to replace manual Excel tracking.
+          Implemented PayPal/bank-transfer refund pipelines with financial checkpoints and MongoDB
+          full-text search plus exportable reporting, enabling the support team to handle 25% more
+          tickets daily with the same headcount.
         </p>
         <p class="showcase-stack">PHP | Zend Framework | MySQL | MongoDB | Google Drive API | REST/OAuth</p>
       </article>
-      <article class="showcase-card reveal-on-scroll project-tone-b">
-        <h3>Warehouse Return Processing Application</h3>
+      <article class="showcase-card reveal-on-scroll project-tone-c">
+        <h3>Warehouse Return APP</h3>
         <p>
           A return-processing web app covering login, barcode/tracking scanning, photo evidence, and
           submission end to end.
@@ -105,14 +123,6 @@ layout: default
           how warehouse staff actually process returns.
         </p>
         <p class="showcase-stack">React | Redux Toolkit | Axios | IBM Carbon Design System | OMS/SMG APIs</p>
-      </article>
-      <article class="showcase-card reveal-on-scroll project-tone-c">
-        <h3>Sale Message System — MyDeal Channel Integration</h3>
-        <p>The internal pipeline that routes sales events and notifications across channels.</p>
-        <p class="showcase-outcome">
-          My role: took the MyDeal channel from spec to production as my first independently-owned
-          integration, setting the pattern later channels reused.
-        </p>
       </article>
     </div>
   </section>
@@ -201,6 +211,7 @@ layout: default
           <span>REST API</span>
           <span>System Design</span>
           <span>Performance Optimization</span>
+          <span>LLM Integration (Gemini)</span>
         </div>
       </div>
       <div class="showcase-skills-group">
