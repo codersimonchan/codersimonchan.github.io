@@ -1780,6 +1780,39 @@ body {
   color: #7a8ea3;
 }
 
+.showcase-v2 .showcase-company-group {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.showcase-v2 .showcase-company-header {
+  padding-left: 24px;
+}
+
+.showcase-v2 .showcase-company-header .company-head-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.showcase-v2 .showcase-company-header h4 {
+  margin: 0;
+  font-size: 21px;
+  color: #16283f;
+}
+
+.showcase-v2 .showcase-company-header .showcase-time {
+  margin: 0;
+  padding-right: 0;
+}
+
+.showcase-v2 .showcase-company-header .showcase-location {
+  margin: 2px 0 0;
+}
+
 .showcase-v2 .showcase-skills {
   margin-top: 16px;
   row-gap: 14px;
